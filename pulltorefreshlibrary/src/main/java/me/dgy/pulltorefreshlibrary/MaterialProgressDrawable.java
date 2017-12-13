@@ -463,7 +463,7 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
             mPaint.setColor(mColors[mColorIndex]);
             c.drawArc(arcBounds, startAngle, sweepAngle, false, mPaint);
 
-            drawTriangle(c, startAngle, sweepAngle, bounds);
+            //drawTriangle(c, startAngle, sweepAngle, bounds);
 
             if (mAlpha < 255) {
                 mCirclePaint.setColor(mBackgroundColor);
@@ -473,6 +473,13 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
             }
         }
 
+        /**
+         * 画箭头，该方法暂时不用
+         * @param c
+         * @param startAngle
+         * @param sweepAngle
+         * @param bounds
+         */
         private void drawTriangle(Canvas c, float startAngle, float sweepAngle, Rect bounds) {
             if (mShowArrow) {
                 if (mArrow == null) {
